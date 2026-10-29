@@ -52,9 +52,9 @@ func set_symbols() -> void:
 
 
 func set_front_sprite() -> void:
-	var x_frame :=0
+	var x_frame := value-2
 	if value == 1:
-		x_frame = 13
+		x_frame = 12
 	var y_frame:= suit+1 #first row of sprite sheet is card backs
 	front_sprite.frame_coords = Vector2i(x_frame,y_frame)
 	pass

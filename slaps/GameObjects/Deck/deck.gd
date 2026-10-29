@@ -11,7 +11,7 @@ const CARD = preload("res://GameObjects/Card/card.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	global_position = Vector2(100,100)
+	global_position = Vector2(60,100)
 	#add_card_to_current_deck(create_card(Card.Suit.HEART, 10))
 	current_deck = create_deck_of_cards()
 	print_current_deck()
@@ -26,7 +26,8 @@ func _process(delta: float) -> void:
 	pass
 
 func display_deck_fanned() -> void:
-	var card_x_offset := 10
+	var card_x_offset := 20
+
 	var c_count := 0
 	for c: Card in current_deck:
 		c.global_position+= Vector2(card_x_offset*c_count,100)

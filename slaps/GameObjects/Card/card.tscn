@@ -10,7 +10,7 @@ script = ExtResource("1_p55ec")
 texture = ExtResource("2_u1wqs")
 hframes = 13
 vframes = 5
-frame = 13
+frame = 16
 
 [node name="BackSprite" type="Sprite2D" parent="." unique_id=1811608567]
 visible = false
