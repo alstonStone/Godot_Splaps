@@ -17,6 +17,8 @@ func _ready() -> void:
 	print_current_deck()
 	for c: Card in current_deck:
 		add_child(c)
+	#current_deck.shuffle()
+	flip_deck()
 	display_deck_fanned()
 	pass # Replace with function body.
 
@@ -25,13 +27,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+
 func display_deck_fanned() -> void:
 	var card_x_offset := 20
-
 	var c_count := 0
 	for c: Card in current_deck:
+		c.z_index = c_count
 		c.global_position+= Vector2(card_x_offset*c_count,100)
 		c_count+=1
+
 
 func create_deck_of_cards() -> Array[Card]:
 	var new_deck: Array[Card]
@@ -41,15 +45,21 @@ func create_deck_of_cards() -> Array[Card]:
 	return new_deck
 
 
-
 func create_card(s: Card.Suit, v: int) -> Card:
 	var new_card: Card = CARD.instantiate() as Card
 	new_card.setup_card(s,v)
 	return new_card
 
+
 func add_card_to_current_deck(c: Card) -> void:
 	current_deck.append(c)
 	pass
+
+
+func flip_deck() -> void:
+	for c: Card in current_deck:
+		c.flip()
+
 
 func print_current_deck() -> void:
 	print(current_deck)

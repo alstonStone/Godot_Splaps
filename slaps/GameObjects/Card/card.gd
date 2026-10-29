@@ -4,15 +4,21 @@ extends Node2D
 
 
 @onready var front_sprite: Sprite2D = $FrontSprite
+@onready var back_sprite: Sprite2D = $BackSprite
 
 enum Suit{HEART,SPADE,DIAMOND,CLUB}
 @export var suit: Suit
+
+enum State{UP,DOWN}
+@export var state: State
+
 var value : int
 var suit_symbol:String
 var value_symbol:String
 
 
 func _ready() -> void:
+	scale = Vector2(1.5,1.5)
 	set_front_sprite()
 	pass
 
@@ -69,3 +75,15 @@ func _to_string() -> String:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func flip() -> void:
+	match state:
+		State.UP:
+			state=State.DOWN
+			back_sprite.visible = true
+			front_sprite.visible = false
+		State.DOWN:
+			state=State.UP
+			back_sprite.visible = false
+			front_sprite.visible = true
