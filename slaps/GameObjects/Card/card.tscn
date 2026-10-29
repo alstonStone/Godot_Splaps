@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cpubfw1y1ymbv"]
+
+[ext_resource type="Script" uid="uid://cem3i3ip4l13y" path="res://GameObjects/Card/card.gd" id="1_p55ec"]
+
+[node name="Card" type="Node2D" unique_id=1444895721]
+script = ExtResource("1_p55ec")
+
+[node name="FrontSprite" type="Sprite2D" parent="." unique_id=332112723]
+hframes = 13
+vframes = 5
+frame = 64
+
+[node name="BackSprite" type="Sprite2D" parent="." unique_id=1811608567]

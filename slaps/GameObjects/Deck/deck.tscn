@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://il1hhjfooekx"]
+
+[ext_resource type="Script" uid="uid://calru4rfa87l" path="res://GameObjects/Deck/deck.gd" id="1_0es37"]
+
+[node name="Deck" type="Node2D" unique_id=1609265187]
+script = ExtResource("1_0es37")
