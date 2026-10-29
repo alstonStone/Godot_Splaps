@@ -13,6 +13,7 @@ var value_symbol:String
 
 
 func _ready() -> void:
+	set_front_sprite()
 	pass
 
 
@@ -23,7 +24,7 @@ func setup_card(s: Suit, v:int) -> void:
 	suit = s
 	value = v
 	set_symbols()
-	set_front_sprite()
+	
 
 func set_symbols() -> void:
 	match value:
@@ -51,8 +52,11 @@ func set_symbols() -> void:
 
 
 func set_front_sprite() -> void:
-	var frame_y_offset:= suit+1 #first row of sprite sheet is card backs
-	front_sprite.frame_coords = Vector2i(value,frame_y_offset)
+	var x_frame :=0
+	if value == 1:
+		x_frame = 13
+	var y_frame:= suit+1 #first row of sprite sheet is card backs
+	front_sprite.frame_coords = Vector2i(x_frame,y_frame)
 	pass
 
 
