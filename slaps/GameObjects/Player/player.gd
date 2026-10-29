@@ -2,6 +2,7 @@ class_name Player
 extends Node2D
 
 signal slapped
+# had sprite should be aroung 80x80 pixels, based off scale of the cards. 
 
 var cards: Array[Card]
 
