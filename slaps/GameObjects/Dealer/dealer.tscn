@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://wkkqbsyq8jpr"]
+
+[ext_resource type="Script" uid="uid://cbcpjdl8qwcfh" path="res://GameObjects/Dealer/dealer.gd" id="1_30jag"]
+
+[node name="Dealer" type="Node2D" unique_id=164980193]
+script = ExtResource("1_30jag")
