@@ -14,6 +14,8 @@ func _ready() -> void:
 	#add_card_to_current_deck(create_card(Card.Suit.HEART, 10))
 	current_deck = create_deck_of_cards()
 	print_current_deck()
+	for c: Card in current_deck:
+		add_child(c)
 	pass # Replace with function body.
 
 
