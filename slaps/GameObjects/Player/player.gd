@@ -5,6 +5,7 @@ signal slapped
 # had sprite should be aroung 80x80 pixels, based off scale of the cards. 
 
 var cards: Array[Card]
+var player_id: int
 
 
 func take_cards(new_cards:Array[Card]) -> void:

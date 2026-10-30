@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://wkkqbsyq8jpr"]
 
 [ext_resource type="Script" uid="uid://cbcpjdl8qwcfh" path="res://GameObjects/Dealer/dealer.gd" id="1_30jag"]
+[ext_resource type="Texture2D" uid="uid://bs282ktnpt3se" path="res://assets/dealer.png" id="2_nk1ep"]
 
 [node name="Dealer" type="Node2D" unique_id=164980193]
 script = ExtResource("1_30jag")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=236454779]
+texture = ExtResource("2_nk1ep")

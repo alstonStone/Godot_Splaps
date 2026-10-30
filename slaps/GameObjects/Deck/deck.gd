@@ -11,6 +11,9 @@ const CARD = preload("res://GameObjects/Card/card.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	deck_test()
+
+func deck_test():
 	global_position = Vector2(60,100)
 	#add_card_to_current_deck(create_card(Card.Suit.HEART, 10))
 	current_deck = create_deck_of_cards()
@@ -18,10 +21,9 @@ func _ready() -> void:
 	for c: Card in current_deck:
 		add_child(c)
 	#current_deck.shuffle()
-	flip_deck()
+	#flip_deck()
 	display_deck_fanned()
 	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

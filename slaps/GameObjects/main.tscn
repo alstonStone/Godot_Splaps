@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://dgar1g501382y"]
 
-[ext_resource type="PackedScene" uid="uid://il1hhjfooekx" path="res://GameObjects/Deck/deck.tscn" id="1_lqx7o"]
+[ext_resource type="PackedScene" uid="uid://wkkqbsyq8jpr" path="res://GameObjects/Dealer/dealer.tscn" id="1_lqx7o"]
+[ext_resource type="Script" uid="uid://dqrui6k1pfvfc" path="res://GameObjects/main.gd" id="1_wp27r"]
 
 [node name="Main" type="Node2D" unique_id=1816559729]
+script = ExtResource("1_wp27r")
 
-[node name="Deck" parent="." unique_id=1609265187 instance=ExtResource("1_lqx7o")]
+[node name="Dealer" parent="." unique_id=164980193 instance=ExtResource("1_lqx7o")]
+position = Vector2(579, 63)
